@@ -18,7 +18,7 @@
          
    - name: print variables
      COURSE: "DevSecOps in playbook"
-   - name: start nginx
+  
      ansible.builtin.debug:
        msg: "i am learning {{ COURSE }} , trainer is {{ TRAINER }}"
         

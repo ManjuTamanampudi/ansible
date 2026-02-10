@@ -1,0 +1,11 @@
+<students>
+ <student>
+  <firstname>Manju </firstname>
+  <dob> 1994-06-11</dob>
+  <addresses>
+     <currentaddress>
+         <flatno>12-207</flatno>
+     </currentaddress>
+  </addresses>
+ </student>
+ </students>

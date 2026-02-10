@@ -1,23 +1,32 @@
 - name: test variables
   hosts: local
   connection: local
-  vars:
-   COURSE: "DevSecOps in playbook"
-   TRAINER: "Shiva"
-  vars_files:
-     - course.yaml
-  vars_prompt:
-     - name: COURSE
-       prompt: Enter course name =
-       private: false 
-     - name: TRAINER
-       prompt: Enter triner name =
-       private: true 
+  # vars:
+  #  COURSE: "DevSecOps in playbook"
+  #  TRAINER: "Shiva"
+  # vars_files:
+  #    - course.yaml
+  # vars_prompt:
+  #    - name: COURSE
+  #      prompt: Enter course name =
+  #      private: false 
+  #    - name: TRAINER
+  #      prompt: Enter triner name =
+  #      private: true 
   
   tasks:         
    - name: print variables
-     vars:
-      COURSE: "DevSecOps in playbook"  
+    #  vars:
+    #   COURSE: "DevSecOps in taskbook"  
      ansible.builtin.debug:
        msg: "i am learning {{ COURSE }} , trainer is {{ TRAINER }}"
         
+
+
+
+        # args
+        # task
+        # vars_files
+        # prompt
+        # play
+        # inventory

@@ -14,11 +14,10 @@
        prompt: Enter triner name =
        private: true 
   
-  tasks:
-         
+  tasks:         
    - name: print variables
-     COURSE: "DevSecOps in playbook"
-  
+     vars:
+     COURSE: "DevSecOps in playbook"  
      ansible.builtin.debug:
        msg: "i am learning {{ COURSE }} , trainer is {{ TRAINER }}"
         

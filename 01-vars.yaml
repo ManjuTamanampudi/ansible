@@ -19,7 +19,7 @@
     #  vars:
     #   COURSE: "DevSecOps in taskbook"  
      ansible.builtin.debug:
-       msg: "i am learning {{ COURSE }} , trainer is {{ TRAINER }}"
+       msg: "i am learning {{ COURSE }} "
         
 
 

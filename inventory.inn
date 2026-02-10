@@ -1,0 +1,11 @@
+[frontend]
+192.28.38.17
+
+
+[backend]
+123.50,78.216
+
+
+[roboshop:child]
+frontend
+backend

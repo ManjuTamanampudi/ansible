@@ -1,0 +1,24 @@
+- name: Datatypes
+  hosts: local
+  connection: local
+  vars:
+    name: "manju"
+    age: 32
+    is_female: true
+    address:
+      flatno: "12-207"
+      town: "Gopalapuram"
+      state: "AP"
+    skills:
+      - angular
+      - nodejs
+      - devops  
+  task:
+   - name: print datatypes
+     ansible.builtin.debug:
+       msg: |
+        name: "{{ name }}"
+        age: "{{ age }}"
+        is_female: "{{ is_female }}"
+        address: "{{ address }}"
+        skills: "{{ skills }}"

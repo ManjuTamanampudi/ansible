@@ -1,6 +1,6 @@
 - name: Datatypes
-  hosts: local
-  connection: local
+  hosts: web
+  #connection: local
   vars:
     duration: 7  
   tasks:

@@ -1,0 +1,10 @@
+- name: Datatypes
+  hosts: local
+  connection: local
+  vars:
+    duration: 7  
+  tasks:
+   - name: print if number of sessions lessthan 10
+     ansible.builtin.debug:
+       msg: number of sessions are '{{ duration }}'
+     when: duration < 10

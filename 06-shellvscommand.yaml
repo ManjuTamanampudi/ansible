@@ -7,7 +7,7 @@
   tasks:     
    - name: shell vs command
      #ansible.builtin.command: cat etc/passwd | grep root // command will not work  for >, < , |, & etc any special char
-     ansible.builtin.shell: cat etc/passwd | grep root
+     ansible.builtin.shell: cat /etc/passwd | grep root
      register: output_file
 
    - name: print output_file

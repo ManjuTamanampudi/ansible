@@ -1,7 +1,7 @@
 - name: Datatypes
+  become: yes
   hosts: local
   connection: local
-  became: yes
   vars:
     list_string: 10, 11, 12
     mapobj: "{1, 2, 3}"

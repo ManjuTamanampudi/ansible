@@ -4,7 +4,10 @@
   connection: local
   vars:
     list_string: 10, 11, 12
-    mapobj: "{1, 2, 3}"
+    mapobj: 
+       1:1
+       2:2
+       3:3
     listarray:
       - manju
       - surreddy

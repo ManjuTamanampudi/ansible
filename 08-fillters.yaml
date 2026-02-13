@@ -12,20 +12,20 @@
   tasks:
    - name: print undefined variable
      ansible.builtin.debug:
-     msg: "{{ Greatings | default: 'Good Morning' }}"
+      msg: "{{ Greatings | default: 'Good Morning' }}"
 
    - name: convert string to listarray
      ansible.builtin.debug:
-     msg: '{{ list_string | split( ", ") }}'
+      msg: '{{ list_string | split( ", ") }}'
 
 
    - name: convert map to listarray
      ansible.builtin.debug:
-     msg: '{{ mapobj | dict2items }}'
+      msg: '{{ mapobj | dict2items }}'
 
    - name: convert array to map
      ansible.builtin.debug:
-     msg: '{{ listarray | items2dict }}'
+      msg: '{{ listarray | items2dict }}'
  
    
   

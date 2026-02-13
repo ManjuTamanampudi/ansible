@@ -9,4 +9,4 @@
 
    - name: create a user
      ansible.builtin.command: useradd manju
-     msg: user created
+     when: output_file.rc != 0

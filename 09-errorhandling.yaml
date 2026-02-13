@@ -6,6 +6,7 @@
    - name : find a user
      ansible.builtin.command: id manju
      register: output_file
+     ignore_errors: true
 
    - name: create a user
      ansible.builtin.command: useradd manju

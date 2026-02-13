@@ -11,6 +11,7 @@
       - dhanya
   tasks:
    - name: print undefined variable
+     ansible.builtin.debug:
      msg: "{{ Greatings | default: 'Good Morning' }}"
 
    - name: convert string to listarray

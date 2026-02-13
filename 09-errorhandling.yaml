@@ -1,0 +1,12 @@
+- name: error handling
+  host: local
+  become: yes
+  connection: local
+  task:
+   - name : find a user
+     ansible.builtin.command: id manju
+     register: output_file
+
+   - name: create a user
+     ansible.builtin.command: useradd manju
+     msg: user created

@@ -1,0 +1,18 @@
+- name: Datatypes
+  hosts: local
+  connection: local
+ 
+
+  
+  tasks:     
+  
+
+   - name: print loop
+     ansible.builtin.debug:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+
+     loop: 
+      - {name: "mongodb", state: "absent"}
+      - {name: "sql", state: "present"}
+      - {name: "redis", state: "absent"}

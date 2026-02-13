@@ -1,0 +1,30 @@
+- name: Datatypes
+  hosts: local
+  connection: local
+  became: yes
+  vars:
+    list_string: 10, 11, 12
+    mapobj: "{1, 2, 3}"
+    listarray:
+      - manju
+      - surreddy
+      - dhanya
+  tasks:
+   - name: print undefined variable
+     msg: "{{ Greatings | default: 'Good Morning' }}"
+
+   - name: convert string to listarray
+     ansible.builtin.debug:
+     msg: '{{ list_string | split( ", ") }}'
+
+
+   - name: convert map to listarray
+     ansible.builtin.debug:
+     msg: '{{ mapobj | dict2items }}'
+
+   - name: convert array to map
+     ansible.builtin.debug:
+     msg: '{{ listarray | items2dict }}'
+ 
+   
+  

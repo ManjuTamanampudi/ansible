@@ -2,7 +2,7 @@
   hosts: local
   become: yes
   connection: local
-  task:
+  tasks:
    - name : find a user
      ansible.builtin.command: id manju
      register: output_file

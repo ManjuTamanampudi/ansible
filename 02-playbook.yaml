@@ -11,4 +11,13 @@
        name: nginx
        state: started
        enabled: yes
+
+- name:  run second play
+  become: yes
+  hosts: local
+  connection: local
+  tasks:
+   - name: print hi
+     ansible.builtin.debug: 
+       msg: Hi from PLAY-2       
         

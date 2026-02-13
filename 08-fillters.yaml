@@ -12,7 +12,7 @@
   tasks:
    - name: print undefined variable
      ansible.builtin.debug:
-      msg: "{{ Greatings | default: 'Good Morning' }}"
+      msg: "{{ Greatings | default: ('Good Morning') }}"
 
    - name: convert string to listarray
      ansible.builtin.debug:

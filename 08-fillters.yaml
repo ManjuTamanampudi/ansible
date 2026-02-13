@@ -4,10 +4,11 @@
   connection: local
   vars:
     list_string: 10, 11, 12
-    mapobj: 
-       1: 1
-       2: 2
+    mapobj: { 
+       1: 1,
+       2: 2,
        3: 3
+       }
     listarray: [
         {
             "key": 1,
@@ -40,6 +41,15 @@
    - name: convert array to map
      ansible.builtin.debug:
       msg: '{{ listarray | items2dict }}'
+
+   - name: read student yaml
+     ansible.builtin.set_fact:
+      student.yaml: '{{ lookup("file", "student.yaml") | from_yaml }}'
+
+   - name: convert yaml to json
+     ansible.builtin.debug:
+      msg: '{{ student.yaml | to_nice_json }}'  
+
  
    
   

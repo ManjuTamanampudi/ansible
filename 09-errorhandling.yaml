@@ -1,5 +1,5 @@
 - name: error handling
-  host: local
+  hosts: local
   become: yes
   connection: local
   task:
